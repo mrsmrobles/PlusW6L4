@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Pie</title>
+    <!--html requirements: h1, h2, p, div, span, strong, em, br, hr, a, img, button-->
+    <!--css requirements: margin, padding, font-size, font-weight, color, background (with linear-gradient), line-height, box-shadow, border, transition-->
+    <!--JavaScript requirements: let, if, else, alert, prompt, event-->
+    <style>
+      .heading {
+        background: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+        padding: 30px;
+        text-align: center;
+      }
+      h1 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: aliceblue;
+        font-size: 75px;
+        height: 150px;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        max-width: 500px;
+      }
+      h2 {
+        font-size: 45px;
+        color: #2f3c4f;
+      }
+      img {
+        height: 600px;
+        border: 1px solid white;
+        border-radius: 20px;
+        display: block;
+        margin: 50px auto;
+      }
+      p {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 25px;
+      }
+      h3 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        line-height: 35px;
+      }
+      li {
+        font-size: 20px;
+      }
+      button {
+        display: block;
+        margin: 50px auto;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        background-color: #6991c7;
+        color: white;
+        border: 1px solid white;
+        border-radius: 100px;
+        box-shadow: 4px 4px 2px 1px #a9bae3;
+      }
+      button:hover {
+        transition: ease-in-out;
+        background-color: #6087b9;
+        box-shadow: none;
+      }
+      button:active {
+        transition: ease-in-out;
+        background-color: #486993;
+        box-shadow: none;
+      }
+      a {
+        color: #486993;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      footer {
+        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-align: center;
+        margin: 50px;
+        font-weight: bold;
+      }
+      video {
+        display: block;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Apple Pie is the Best Pie</h1>
+      <h2><em>...and it's fun to make!</em></h2>
+    </div>
+    <span>
+      <img
+        src="https://schoolnightvegan.com/wp-content/uploads/2022/11/vegan-apple-pie-25.jpg"
+      />
+      <p>
+        A flaky, buttery pie crust generously filled with gently spiced apples
+        alongside a big scoop of vanilla ice cream-
+        <strong> it doesn’t get much more delicious than that.</strong> And this
+        apple pie recipe is a festive, easy holiday dessert that’s perfect for
+        fall! Apple pie is an iconic American dessert. It’s ubiquitous on almost
+        every holiday table because it is simply that popular, so much so that
+        many families have their own take on an apple pie recipe.
+      </p>
+    </span>
+    <br />
+    <hr />
+    <br />
+    <h3>Ingredients</h3>
+    <ul>
+      <li>3 pounds apples peeled, cored, and thinly sliced</li>
+      <li>2 tablespoons lemon juice</li>
+      <li>1 cup granulated sugar (200g)</li>
+      <li>½ cup all-purpose flour (60g)</li>
+      <li>1½ teaspoons ground cinnamon</li>
+      <li>¼ teaspoon ground nutmeg</li>
+      <li>1 (9-inch) double-crust pie dough</li>
+      <li>2 tablespoons unsalted butter diced</li>
+      <li>1 large egg lightly beaten</li>
+    </ul>
+    <a href="https://preppykitchen.com/apple-pie/#recipe">
+      Read the full recipe
+    </a>
+    <button>Subscribe for More</button>
+    <footer>This page was built by Madison Robles</footer>
+    <script>
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+      function Recipe() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let response = confirm("Do you want to receive emails from us?");
+        let heading = document.querySelector("h1");
+        let subtitle = document.querySelector("h2");
+
+        if (response == true) {
+          heading.innerHTML = "😀 Great " + name + "!";
+          subtitle.innerHTML = "You're signed up!";
+        } else {
+          alert("🥲 Really " + name + " why did you even click the button?");
+        }
+      }
+      let buttonClick = document.querySelector("button");
+      buttonClick.addEventListener("click", Recipe);
+      buttonClick.addEventListener("click", topFunction);
+    </script>
+  </body>
+</html>
